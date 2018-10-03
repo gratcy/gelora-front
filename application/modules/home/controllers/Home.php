@@ -10,6 +10,7 @@ class Home extends MX_Controller {
 	public function index()
 	{
 		$data['article'] = $this -> Home_model -> __getPosts(3, 0);
+		$data['ads'] = $this -> Home_model -> __getAds(6, 0);
 		$this->load->view('home', $data);
 	}
 }

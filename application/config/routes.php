@@ -53,9 +53,12 @@ $route['default_controller'] = 'home';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
-$route['posts'] = 'posts/home/posts';
-$route['categories/(:num)'] = 'posts/home/posts/$1';
-$route['page/(:num)'] = 'pages/home/index/$1';
-$route['post/(:num)'] = 'posts/home/index/$1';
-$route['event/(:num)'] = 'events/home/detail/$1';
-$route['events'] = 'events/home/index';
+$route['page/(:any)'] = 'pages/home/index/$1';
+
+$route['ads'] = 'ads/home/index';
+$route['ads/category/(:any)'] = 'ads/home/categories/$1';
+$route['ads/(:any)'] = 'ads/home/detail/$1';
+
+$route['posts'] = 'posts/home/index';
+$route['category/(:any)'] = 'posts/home/categories/$1';
+$route['(:any)'] = 'posts/home/detail/$1';

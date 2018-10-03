@@ -109,14 +109,12 @@
     <script src="<?php echo base_url(); ?>assets/js/vendor/bootstrap.min.js"></script>
     <script src="http://maps.google.com/maps/api/js?key=AIzaSyCR-KEWAVCn52mSdeVeTqZjtqbmVJyfSus&language=en"></script>
     <script src="http://exprostudio.com/html/classified/js/tinymce/tinymce.min.js?apiKey=4cuu2crphif3fuls3yb1pe4qrun9pkq99vltezv2lv6sogci"></script>
-    <script src="<?php echo base_url(); ?>assets/js/responsivethumbnailgallery.js"></script>
     <script src="<?php echo base_url(); ?>assets/js/jquery.flagstrap.min.js"></script>
     <script src="<?php echo base_url(); ?>assets/js/backgroundstretch.js"></script>
     <script src="<?php echo base_url(); ?>assets/js/owl.carousel.min.js"></script>
     <script src="<?php echo base_url(); ?>assets/js/jquery.vide.min.js"></script>
     <script src="<?php echo base_url(); ?>assets/js/jquery.collapse.js"></script>
     <script src="<?php echo base_url(); ?>assets/js/scrollbar.min.js"></script>
-    <script src="http://exprostudio.com/html/classified/JS/chartist.min.js"></script>
     <script src="<?php echo base_url(); ?>assets/js/prettyPhoto.js"></script>
     <script src="<?php echo base_url(); ?>assets/js/jquery-ui.js"></script>
     <script src="<?php echo base_url(); ?>assets/js/countTo.js"></script>

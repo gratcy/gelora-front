@@ -54,3 +54,61 @@ function __get_image_url($text) {
     preg_match('/<img.+src=[\'"](?P<src>.+?)[\'"].*>/i', $text, $result);
     return isset($result[1]) ? $result[1] : '';
 }
+
+function __get_rupiah($num,$type=1) {
+    if ($type == 1) return "Rp. " . number_format($num,0,',','.');
+    elseif ($type == 2) return number_format($num,0,',',',');
+    elseif ($type == 3) return number_format($num,2,',','.');
+    else return "Rp. " . number_format($num,2,',','.');
+}
+
+function __get_categories_menus($type) {
+    $url = '';
+    if ($type == 1) {
+        $url = 'category/';
+    }
+    else {
+        $url = 'ads/category/';
+    }
+    $CI =& get_instance();
+    $CI -> load -> model('home/Home_model');
+    $menus = $CI -> Home_model -> __get_categories($type);
+    $res = '';
+    foreach ($menus as $key => $v) {
+        $res .= '<li>';
+            $res .= '<a href="'.base_url($url . $v -> cslug).'">'.$v -> cname.'<span></span></a>';
+        $res .= '</li>';
+    }
+    return $res;
+}
+
+function __get_pages_menus() {
+    $CI =& get_instance();
+    $CI -> load -> model('home/Home_model');
+    $menus = $CI -> Home_model -> __get_pages();
+    $res = '';
+    foreach ($menus as $key => $v) {
+        $res .= '<li>';
+            $res .= '<a href="'.base_url('page/'.$v -> pslug).'">'.$v -> ptitle.'<span></span></a>';
+        $res .= '</li>';
+    }
+    return $res;
+}
+
+function __timeago($date) {
+   $timestamp = strtotime($date);   
+   
+   $strTime = array("second", "minute", "hour", "day", "month", "year");
+   $length = array("60","60","24","30","12","10");
+
+   $currentTime = time();
+   if($currentTime >= $timestamp) {
+        $diff     = time()- $timestamp;
+        for($i = 0; $diff >= $length[$i] && $i < count($length)-1; $i++) {
+        $diff = $diff / $length[$i];
+        }
+
+        $diff = round($diff);
+        return $diff . " " . $strTime[$i] . "(s) ago ";
+   }
+}

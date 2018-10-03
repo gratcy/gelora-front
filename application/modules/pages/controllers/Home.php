@@ -8,10 +8,9 @@ class Home extends MX_Controller {
 		$this -> load -> library('Plugins_lib');
 	}
 
-	public function index($id)
+	public function index($slug)
 	{
-		$data['data'] = $this -> Pages_model -> __get_pages_detail($this -> config -> config['faculty'], $id);
-		$data['plugins'] = $this -> plugins_lib -> __get_plugins($this -> config -> config['faculty'], $id);
+		$data['data'] = $this -> Pages_model -> __get_pages_detail($slug);
 		$data['title'] = $data['data'][0] -> ptitle;
 		$this->load->view('pages', $data);
 	}
