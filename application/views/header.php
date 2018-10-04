@@ -44,10 +44,10 @@
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                             <ul class="tg-navcurrency">
-                                <li><a href="index.html#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="index.html#"><i class="fa fa-instagram"></i></a></li>
-                                <li><a href="index.html#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="index.html#"><i class="fa fa-youtube"></i></a></li>
+                                <li><a href="https://www.facebook.com/gelora"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="https://www.instagram.com/gelora_org/"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="https://twitter.com/gelora"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="https://bit.ly/geloravideo"><i class="fa fa-youtube"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -74,7 +74,7 @@
                                 <div id="tg-navigation" class="collapse navbar-collapse tg-navigation">
                                     <ul>
                                         <li class="menu-item">
-                                            <a href="javascript:void(0);">Home</a>
+                                            <a href="<?php echo base_url(); ?>">Home</a>
                                         </li>
                                         <li class="menu-item-has-children current-menu-item">
                                             <a href="javascript:void(0);">Iklan</a>
@@ -92,7 +92,7 @@
                                             <a href="javascript:void(0);">Halaman</a>
                                             <ul class="sub-menu">
                                                 <?php echo __get_pages_menus(); ?>
-                                                <li><a href="http://luckybp.com" target="_blank">LBP</a></li>
+                                                <li><a href="http://luckybp.com" target="_blank">Profil Lucky Bayu Purnomo</a></li>
                                             </ul>
                                         </li>
                                     </ul>

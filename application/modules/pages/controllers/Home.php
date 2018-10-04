@@ -11,6 +11,9 @@ class Home extends MX_Controller {
 	public function index($slug)
 	{
 		$data['data'] = $this -> Pages_model -> __get_pages_detail($slug);
+		if (empty($data['data'][0] -> ptitle)) {
+			redirect(base_url());
+		}
 		$data['title'] = $data['data'][0] -> ptitle;
 		$this->load->view('pages', $data);
 	}

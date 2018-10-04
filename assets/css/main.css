@@ -3516,7 +3516,7 @@ li.tg-rss a { background:#ff6600; }
 .tg-detail > figure{margin: 0 0 30px;}
 .tg-detail .tg-description strong{
 	width: 100%;
-	float: left;
+	/*float: left;*/
 	font-weight: 500;
 }
 .tg-detail .tg-description p{

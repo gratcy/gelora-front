@@ -29,8 +29,6 @@
 									</div>
 									<div class="tg-description">
 										<?php echo $data[0] -> pcontent; ?>
-
-										<p><span>Trims!</span><i><img src="<?php echo base_url(); ?>assets/images/icons/img-31.png" alt="image description"></i></p>
 									</div>
 									<div class="tg-share">
 										<strong>share:</strong>

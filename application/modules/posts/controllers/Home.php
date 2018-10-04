@@ -16,6 +16,9 @@ class Home extends MX_Controller {
 	public function detail($slug)
 	{
 		$data['data'] = $this -> Posts_model -> __get_posts_detail($slug);
+		if (empty($data['data'][0] -> ptitle)) {
+			redirect(base_url());
+		}
 		$data['title'] = $data['data'][0] -> ptitle;
 		$data['description'] = __limit_word($data['data'][0] -> pcontent, 50);
 		$this->load->view('posts-detail', $data);
