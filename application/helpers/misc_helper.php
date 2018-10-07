@@ -62,6 +62,29 @@ function __get_rupiah($num,$type=1) {
     else return "Rp. " . number_format($num,2,',','.');
 }
 
+function __set_error_msg($arr) {
+    $CI =& get_instance();
+    return $CI -> cache -> memcached -> save('__msg', $arr, '60');
+}
+
+function __get_error_msg() {
+    $CI =& get_instance();
+    $css = (isset($CI -> cache -> memcached -> get('__msg')['error']) == '' ? 'success' : 'danger');
+    if (isset($CI -> cache -> memcached -> get('__msg')['info'])) $CI -> cache -> memcached -> save('__msg_tmp', array('info' => true), '60');
+    if (isset($CI -> cache -> memcached -> get('__msg')['error']) || isset($CI -> cache -> memcached -> get('__msg')['info'])) {
+        $res = '<div class="alert alert-'.$css.' alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>';
+        $res .= (isset($CI -> cache -> memcached -> get('__msg')['error']) ? $CI -> cache -> memcached -> get('__msg')['error'] : $CI -> cache -> memcached -> get('__msg')['info']);
+        $res .= '</div>';
+        $CI -> cache -> memcached -> delete('__msg');
+        return $res;
+    }
+}
+
+function __slugify($text) { 
+    $text = iconv('utf-8', 'us-ascii//TRANSLIT', $text);
+    return strtolower(preg_replace('/[^A-Za-z0-9-]+/', '-', $text));
+}
+
 function __get_categories_menus($type) {
     $url = '';
     if ($type == 1) {
@@ -78,6 +101,20 @@ function __get_categories_menus($type) {
         $res .= '<li>';
             $res .= '<a href="'.base_url($url . $v -> cslug).'">'.$v -> cname.'<span></span></a>';
         $res .= '</li>';
+    }
+    return $res;
+}
+
+function __get_categories_ads($id) {
+    $CI =& get_instance();
+    $CI -> load -> model('home/Home_model');
+    $menus = $CI -> Home_model -> __get_categories(2);
+    $res = '';
+    foreach ($menus as $key => $v) {
+        if ($id == $v -> cid)
+            $res .= '<option value="'.$v -> cid.'" selected>'.$v -> cname.'</option>';
+        else
+            $res .= '<option value="'.$v -> cid.'">'.$v -> cname.'</option>';
     }
     return $res;
 }

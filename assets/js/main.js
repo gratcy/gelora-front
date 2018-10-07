@@ -515,4 +515,12 @@ jQuery(document).on('ready', function() {
 		autoplay_slideshow: false,
 		social_tools: false
 	});
+
+	$('.ads-submit').click(function() {
+		$('form[name="ads-new"]').submit()
+	})
+
+	$('form.tg-formbannersearch button.tg-btn').click(function() {
+		$('form.tg-formbannersearch').submit()
+	})
 });

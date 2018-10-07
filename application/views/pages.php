@@ -33,9 +33,9 @@
 									<div class="tg-share">
 										<strong>share:</strong>
 										<ul class="tg-socialicons">
-											<li class="tg-facebook"><a href="https://www.facebook.com/sharer.php?u=<?php echo base_url($data[0] -> pslug); ?>"><i class="fa fa-facebook"></i></a></li>
-											<li class="tg-twitter"><a href="https://twitter.com/intent/tweet?url=<?php echo base_url($data[0] -> pslug); ?>&text=<?php echo urlencode($data[0] -> ptitle); ?>"><i class="fa fa-twitter"></i></a></li>
-											<li class="tg-linkedin"><a href="mailto:?subject=<?php echo urlencode($data[0] -> ptitle); ?>&body=Check out this site <?php echo base_url($data[0] -> pslug); ?>"><i class="fa fa-envelope"></i></a></li>
+											<li class="tg-facebook"><a href="https://www.facebook.com/sharer.php?u=<?php echo base_url('page/'.$data[0] -> pslug); ?>"><i class="fa fa-facebook"></i></a></li>
+											<li class="tg-twitter"><a href="https://twitter.com/intent/tweet?url=<?php echo base_url('page/'.$data[0] -> pslug); ?>&text=<?php echo urlencode('page/'.$data[0] -> ptitle); ?>"><i class="fa fa-twitter"></i></a></li>
+											<li class="tg-linkedin"><a href="mailto:?subject=<?php echo urlencode($data[0] -> ptitle); ?>&body=Check out this site <?php echo base_url('page/'.$data[0] -> pslug); ?>"><i class="fa fa-envelope"></i></a></li>
 										</ul>
 									</div>
 								</div>

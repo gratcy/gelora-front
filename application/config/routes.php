@@ -53,8 +53,11 @@ $route['default_controller'] = 'home';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
+$route['search'] = 'search/home/index';
 $route['page/(:any)'] = 'pages/home/index/$1';
 
+$route['post-ads/?(:num)?'] = 'ads/home/add/$1';
+$route['iklan/upload/(:num)'] = 'ads/home/upload/$1';
 $route['ads'] = 'ads/home/index';
 $route['ads/category/(:any)'] = 'ads/home/categories/$1';
 $route['ads/(:any)'] = 'ads/home/detail/$1';

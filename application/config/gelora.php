@@ -28,3 +28,4 @@ $config['base_url'] = getenv('BASEURL');
 $config['upload']['host'] = getenv('ASSETS_URL');
 $config['upload']['media']['path'] = 'media/';
 $config['upload']['ads']['path'] = 'iklan/';
+$config['upload']['ads']['realpath'] = '/var/www/html/gelora-panel/upload/iklan/';

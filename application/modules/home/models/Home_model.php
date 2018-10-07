@@ -34,7 +34,7 @@ class Home_model extends CI_Model {
 	}
 
 	function __get_categories($type) {
-		$sql = $this -> db -> query('SELECT cname, cslug FROM categories_tab WHERE ctype='.$type.' AND cstatus=1 ORDER BY cid DESC');
+		$sql = $this -> db -> query('SELECT cid, cname, cslug FROM categories_tab WHERE ctype='.$type.' AND cstatus=1 ORDER BY cid DESC');
 		return $sql -> result();
 	}
 

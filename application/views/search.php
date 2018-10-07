@@ -9,14 +9,14 @@
                                         <fieldset>
                                             <div class="form-group tg-inputwithicon">
                                                 <i class="icon-bullhorn"></i>
-                                                <input type="text" name="keyword" class="form-control" placeholder="Apa yang anda cari?">
+                                                <input type="text" name="keyword" value="<?php echo $keyword; ?>" class="form-control" placeholder="Apa yang anda cari?">
                                             </div>
                                             <div class="form-group tg-inputwithicon">
                                                 <i class="icon-layers"></i>
                                                 <div class="tg-select">
                                                     <select name="category">
                                                     	<option value="0">Semua Kategori</option>
-                                                        <?php echo __get_categories_ads(); ?>
+                                                        <?php echo __get_categories_ads($category); ?>
                                                     </select>
                                                 </div>
                                             </div>
@@ -36,7 +36,7 @@
 							<ol class="tg-breadcrumb">
 								<li><a href="<?php echo base_url(); ?>">Home</a></li>
 								<li>ads</li>
-								<li class="tg-active"><?php echo $data[0] -> atitle; ?></li>
+								<li class="tg-active"><?php echo $title; ?></li>
 							</ol>
 						</div>
 					</div>
@@ -56,11 +56,12 @@
 					<div id="tg-twocolumns" class="tg-twocolumns">
 						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 							<div class="tg-pagehead">
-								<h1>Semua Iklan</h1>
+								<h1>Semua Iklan category (<?php echo $title; ?>)</h1>
 								<p>Total <?php echo $totalAds; ?>, sampai <?php echo date('d, M Y');?></p>
 							</div>
 						</div>
 						<div class="col-xs-12 col-sm-7 col-md-8 col-lg-12">
+							<?php if ($data) : ?>
 								<div class="tg-ads">
 									<div class="row">
 										<?php foreach($data as $k => $v) : ?>
@@ -96,6 +97,7 @@
 									<?php endforeach;?>
 									</div>
 								</div>
+							<?php endif; ?>
 						</div>
 					</div>
 				</div>

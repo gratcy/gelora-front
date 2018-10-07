@@ -25,72 +25,32 @@
             <div class="container">
                 <div class="row">
                     <div class="tg-footerinfo">
-                        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 pull-right">
-                            <div class="tg-widget tg-widgetsearchbylocations">
-                                <div class="tg-widgettitle">
-                                    <h3>Search By Locations:</h3>
-                                </div>
-                                <div class="tg-widgetcontent">
-                                    <ul>
-                                        <li><a href="javascript:void(0);">-  Aberdeen</a></li>
-                                        <li><a href="javascript:void(0);">-  Armagh</a></li>
-                                        <li><a href="javascript:void(0);">-  Bangor</a></li>
-                                        <li><a href="javascript:void(0);">-  Bath</a></li>
-                                        <li><a href="javascript:void(0);">-  Belfast</a></li>
-                                        <li><a href="javascript:void(0);">-  Birmingham</a></li>
-                                        <li><a href="javascript:void(0);">-  Bradford</a></li>
-                                        <li><a href="javascript:void(0);">-  Brighton and Hove</a></li>
-                                        <li><a href="javascript:void(0);">-  Bristol</a></li>
-                                        <li><a href="javascript:void(0);">-  Cambridge</a></li>
-                                    </ul>
-                                    <ul>
-                                        <li><a href="javascript:void(0);">-  Canterbury</a></li>
-                                        <li><a href="javascript:void(0);">-  Cardiff</a></li>
-                                        <li><a href="javascript:void(0);">-  Carlisle</a></li>
-                                        <li><a href="javascript:void(0);">-  Chester</a></li>
-                                        <li><a href="javascript:void(0);">-  Chichester</a></li>
-                                        <li><a href="javascript:void(0);">-  City of London</a></li>
-                                        <li><a href="javascript:void(0);">-  Coventry</a></li>
-                                        <li><a href="javascript:void(0);">-  Derby</a></li>
-                                        <li><a href="javascript:void(0);">-  Dundee</a></li>
-                                        <li><a href="javascript:void(0);">View All</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                             <div class="tg-widget tg-widgettext">
                                 <div class="tg-widgetcontent">
                                     <strong class="tg-logo"><a href="javascript:void(0);"><img src="<?php echo base_url(); ?>assets/images/logof.png" alt="image description"></a></strong>
                                     <div class="tg-description">
-                                        <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua anii ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo aute irurel in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.</p>
+                                        <p>Pendiri GELORA, DR (Can). Lucky Bayu Purnomo SE.,ME.,CSA.,CTA ( LBP ) memiliki cita cita untuk mendorong pertumbuhan ekonomi berdasarkan pemikiran, yaitu Undang Undang Dasar 1945 pasar 33 ayat 1 sampai ayat 5, diharapakan GELORA mampu mengantarkan cita cita mulia untuk mewujudkan ekonomi nasional yang kokoh agar dapat bersaing dalam kancah ekonomi global.Ekonomi Kerakyatan merupakan kegiatan ekonomi yang mengacu pada peningkatan kemakmuran dan kesejahteraan rakyat.</p>
                                     </div>
                                     <div class="tg-followus">
                                         <strong>Follow Us:</strong>
                                         <ul class="tg-socialicons">
-                                            <li class="tg-facebook"><a href="javascript:void(0);"><i class="fa fa-facebook"></i></a></li>
-                                            <li class="tg-twitter"><a href="javascript:void(0);"><i class="fa fa-twitter"></i></a></li>
-                                            <li class="tg-linkedin"><a href="javascript:void(0);"><i class="fa fa-linkedin"></i></a></li>
-                                            <li class="tg-googleplus"><a href="javascript:void(0);"><i class="fa fa-google-plus"></i></a></li>
-                                            <li class="tg-rss"><a href="javascript:void(0);"><i class="fa fa-rss"></i></a></li>
-                                        </ul>
-                                        <ul class="tg-appsnav">
-                                            <li><a href="javascript:void(0);"><img src="<?php echo base_url(); ?>assets/images/apps-01.png" alt="image description"></a></li>
-                                            <li><a href="javascript:void(0);"><img src="<?php echo base_url(); ?>assets/images/apps-02.png" alt="image description"></a></li>
+                                            <li class="tg-facebook"><a href="https://www.facebook.com/gelora"><i class="fa fa-facebook"></i></a></li>
+                                            <li class="tg-twitter"><a href="https://www.instagram.com/gelora_org/"><i class="fa fa-instagram"></i></a></li>
+                                            <li class="tg-linkedin"><a href="https://twitter.com/gelora"><i class="fa fa-twitter"></i></a></li>
+                                            <li class="tg-youtube"><a href="https://bit.ly/geloravideo"><i class="fa fa-youtube"></i></a></li>
                                         </ul>
                                     </div>
                                     <nav class="tg-footernav">
                                         <ul>
-                                            <li><a href="javascript:void(0);">Listing Policy</a></li>
-                                            <li><a href="javascript:void(0);">Terms of Use</a></li>
-                                            <li><a href="javascript:void(0);">Privacy Policy</a></li>
-                                            <li><a href="javascript:void(0);">Mobiles Policy</a></li>
-                                            <li><a href="javascript:void(0);">Change Currency</a></li>
-                                            <li><a href="javascript:void(0);">Sitemap</a></li>
-                                            <li><a href="javascript:void(0);">News</a></li>
+                                            <li><a href="<?php echo base_url('ads'); ?>">Iklan</a></li>
+                                            <li><a href="<?php echo base_url('posts'); ?>">Artikel</a></li>
+                                            <li><a href="<?php echo base_url('page/tentang-gelora-2'); ?>">Tentang GELORA</a></li>
+                                            <li><a href="<?php echo base_url('page/hubungi-kami-1'); ?>">Hubungi Kami</a></li>
+                                            <li><a href="http://luckybp.com" target="_blank">Profil Lucky Bayu Purnomo</a></li>
                                         </ul>
                                     </nav>
-                                    <span class="tg-copyright">2017 All Rights Reserved &copy; Classified PRO</span>
+                                    <span class="tg-copyright">2018 All Rights Reserved</span>
                                 </div>
                             </div>
                         </div>
@@ -120,6 +80,7 @@
     <script src="<?php echo base_url(); ?>assets/js/countTo.js"></script>
     <script src="<?php echo base_url(); ?>assets/js/appear.js"></script>
     <script src="<?php echo base_url(); ?>assets/js/gmap3.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/dropzone.js"></script>
     <script src="<?php echo base_url(); ?>assets/js/main.js"></script>
 </body>
 </html>

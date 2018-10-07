@@ -5,35 +5,24 @@
 						<div class="row">
 							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 								<div class="tg-bannercontent">
-									<form class="tg-formtheme tg-formbannersearch">
-										<fieldset>
-											<div class="form-group tg-inputwithicon">
-												<i class="icon-bullhorn"></i>
-												<input type="text" name="customword" class="form-control" placeholder="What are you looking for">
-											</div>
-											<div class="form-group tg-inputwithicon">
-												<i class="icon-location"></i>
-												<a class="tg-btnsharelocation fa fa-crosshairs" href="javascript:void(0);"></a>
-												<input type="text" name="yourlocation" class="form-control" placeholder="Your Location">
-											</div>
-											<div class="form-group tg-inputwithicon">
-												<i class="icon-layers"></i>
-												<div class="tg-select">
-													<select>
-														<option value="none">Select Category</option>
-														<option value="none">Mobiles</option>
-														<option value="none">Electronics</option>
-														<option value="none">Vehicles</option>
-														<option value="none">Bikes</option>
-														<option value="none">Animals</option>
-														<option value="none">Furniture</option>
-														<option value="none">toys</option>
-													</select>
-												</div>
-											</div>
-											<button class="tg-btn" type="button">Search Now</button>
-										</fieldset>
-									</form>
+                                    <form class="tg-formtheme tg-formbannersearch" method="post" action="<?php echo base_url('search'); ?>">
+                                        <fieldset>
+                                            <div class="form-group tg-inputwithicon">
+                                                <i class="icon-bullhorn"></i>
+                                                <input type="text" name="keyword" class="form-control" placeholder="Apa yang anda cari?">
+                                            </div>
+                                            <div class="form-group tg-inputwithicon">
+                                                <i class="icon-layers"></i>
+                                                <div class="tg-select">
+                                                    <select name="category">
+                                                    	<option value="0">Semua Kategori</option>
+                                                        <?php echo __get_categories_ads(); ?>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <button class="tg-btn" type="button">Cari</button>
+                                        </fieldset>
+                                    </form>
 								</div>
 							</div>
 						</div>
@@ -109,13 +98,14 @@
 										      <li data-target="#myCarousel" data-slide-to="1"></li>
 										      <li data-target="#myCarousel" data-slide-to="2"></li>
 										    </ol>
-
+											<?php if (count($photos) > 0) : ?>
 										    <div class="carousel-inner">
 										    	<?php foreach($photos as $k => $v): ?>
 										      <div class="item <?php echo ($k === 0 ? 'active' : ''); ?>">
 										        <img src="<?php echo __get_upload_file($v['img'], 2); ?>" alt="Los Angeles" style="width:100%;">
 										      </div>
 										  <?php endforeach; ?>
+										  <?php endif; ?>
 										    </div>
 
 										    <!-- Left and right controls -->
@@ -144,10 +134,10 @@
 									<div class="tg-description">
 										<?php echo $data[0] -> adesc; ?>
 
-										<div class="tg-fullimg">
+<!-- 										<div class="tg-fullimg">
 											<figure><img src="<?php echo __get_upload_file($photos[rand(0, count($photos)-1)]['img'], 2); ?>" alt="<?php echo $data[0] -> atitle; ?>" title="<?php echo $data[0] -> atitle; ?>"></figure>
 										</div>
-										<p><span>Trims!</span><i><img src="<?php echo base_url(); ?>assets/images/icons/img-31.png" alt="image description"></i></p>
+										<p><span>Trims!</span><i><img src="<?php echo base_url(); ?>assets/images/icons/img-31.png" alt="image description"></i></p> -->
 									</div>
 									<div class="tg-share">
 										<strong>share:</strong>
