@@ -54,6 +54,7 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 $route['search'] = 'search/home/index';
+$route['subscription'] = 'home/subscription_newsletter';
 $route['page/(:any)'] = 'pages/home/index/$1';
 
 $route['post-ads/?(:num)?'] = 'ads/home/add/$1';

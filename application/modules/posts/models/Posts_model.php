@@ -16,7 +16,7 @@ class Posts_model extends CI_Model {
     		$slugQuery = " AND b.cslug='".$slug."'";
     	}
 
-		$sql = $this -> db -> query("SELECT a.*,b.cname,b.cslug,c.uname FROM posts_tab a JOIN categories_tab b ON a.pcid=b.cid JOIN users_tab c ON a.puid=c.uid WHERE a.pstatus=1" . $slugQuery, FALSE);
+		$sql = $this -> db -> query("SELECT a.*,b.cname,b.cslug,c.uname FROM posts_tab a JOIN categories_tab b ON a.pcid=b.cid JOIN users_tab c ON a.puid=c.uid WHERE a.pstatus=1" . $slugQuery . " ORDER BY a.pid DESC", FALSE);
 		return $sql -> result();
 	}
 }

@@ -21,7 +21,7 @@ class Search_model extends CI_Model {
             $categoryQuery = ' AND a.acid=' . $category;
         }
 
-		$sql = $this -> db -> query("SELECT a.*,b.cname,b.cslug FROM ads_tab a JOIN categories_tab b ON a.acid=b.cid WHERE a.astatus=1".$categoryQuery." AND (atitle LIKE '%".$search."%' OR adesc LIKE '%".$search."%')", FALSE);
+		$sql = $this -> db -> query("SELECT a.*,b.cname,b.cslug FROM ads_tab a JOIN categories_tab b ON a.acid=b.cid WHERE a.astatus=1".$categoryQuery." AND (atitle LIKE '%".$search."%' OR adesc LIKE '%".$search."%') ORDER BY a.aid DESC", FALSE);
 		return $sql -> result();
 	}
 }

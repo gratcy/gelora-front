@@ -38,7 +38,7 @@ class Ads_model extends CI_Model {
     		$slugQuery = " AND b.cslug='".$slug."'";
     	}
 
-		$sql = $this -> db -> query("SELECT a.*,b.cname,b.cslug FROM ads_tab a JOIN categories_tab b ON a.acid=b.cid WHERE a.astatus=1" . $slugQuery, FALSE);
+		$sql = $this -> db -> query("SELECT a.*,b.cname,b.cslug FROM ads_tab a JOIN categories_tab b ON a.acid=b.cid WHERE a.astatus=1" . $slugQuery . " ORDER BY a.aid DESC", FALSE);
 		return $sql -> result();
 	}
 }

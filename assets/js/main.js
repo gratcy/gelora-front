@@ -1,6 +1,10 @@
 /*--------------------------------------
 		CUSTOM FUNCTION WRITE HERE		
 --------------------------------------*/
+function validateEmail(email) {
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
 "use strict";
 jQuery(document).on('ready', function() {
 	/*--------------------------------------
@@ -522,5 +526,21 @@ jQuery(document).on('ready', function() {
 
 	$('form.tg-formbannersearch button.tg-btn').click(function() {
 		$('form.tg-formbannersearch').submit()
+	})
+	
+	$('#newsletter > button#signupnewsletter').click(function(){
+		var email = $('#newsletter > input[name="email"]').val()
+		if (!email) {
+			alert('Email harus di isi !!!');
+		}
+		else if (!validateEmail(email)) {
+			alert('Format email tidak diterima !!!');
+		}
+		else {
+			$.post( "/subscription", { email: email }, function( data ) {
+				alert(data.message)
+				$('#newsletter > input[name="email"]').val('')
+			});
+		}
 	})
 });

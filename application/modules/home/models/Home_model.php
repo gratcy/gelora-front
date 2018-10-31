@@ -42,4 +42,8 @@ class Home_model extends CI_Model {
 		$sql = $this -> db -> query('SELECT pslug, ptitle FROM pages_tab WHERE pstatus=1 ORDER BY pid DESC');
 		return $sql -> result();
 	}
+    
+    function __insert_newsletter($data) {
+        return $this -> db -> insert('newsletter_tab', $data);
+    }
 }
